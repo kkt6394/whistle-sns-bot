@@ -1,0 +1,50 @@
+name: dm
+# 이벤트 댓글 → DM. 30분마다 시작해 28분 동안 20초 간격으로 확인한다(5분 cron보다 빨리 답하려고, 11-16).
+# 이벤트가 끝나면(ig_comment_dm.py가 "이벤트 끝남") 바로 끝난다.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: dm
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 32
+    env:
+      TZ: Asia/Seoul
+      WHISTLE_STATE_DIR: state
+      HASH_USERS: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 토큰
+        env:
+          META: ${{ secrets.META_JSON }}
+        run: |
+          mkdir -p ~/.config/whistle
+          printf '%s' "$META" > ~/.config/whistle/meta.json
+
+      - name: 20초마다 확인
+        run: |
+          git config user.name "whistle-sns-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          end=$(( $(date +%s) + 28 * 60 ))
+          while [ "$(date +%s)" -lt "$end" ]; do
+            git pull -q --rebase || true
+            out=$(python3 ig_comment_dm.py run 2>&1) || echo "실행 오류"
+            [ -n "$out" ] && echo "$(date +%H:%M:%S) $out"
+            case "$out" in *"이벤트 끝남"*) break ;; esac
+            git add state/ig-dm-sent.json
+            if ! git diff --cached --quiet; then
+              git commit -q -m "state: dm"
+              for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 3; done
+            fi
+            sleep 20
+          done

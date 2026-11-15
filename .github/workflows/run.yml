@@ -1,5 +1,5 @@
 name: sns
-# 5분마다: 인스타 이벤트 댓글 → DM, 예약 스토리·피드 게시. 기록은 state/에 커밋한다.
+# 5분마다: 예약 스토리·피드 게시. 기록은 state/에 커밋한다. 이벤트 DM은 dm.yml.
 on:
   schedule:
     - cron: "*/5 * * * *"
@@ -30,10 +30,6 @@ jobs:
           mkdir -p ~/.config/whistle
           printf '%s' "$META" > ~/.config/whistle/meta.json
 
-      - name: 이벤트 DM
-        if: always()
-        run: python3 ig_comment_dm.py run
-
       - name: 스토리·피드
         if: always()
         run: python3 post_story.py due
@@ -46,6 +42,5 @@ jobs:
           git add state
           if ! git diff --cached --quiet; then
             git commit -q -m "state"
-            git pull -q --rebase
-            git push -q
+            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 3; done
           fi
