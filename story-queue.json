@@ -1,0 +1,292 @@
+[
+ {
+  "at": "2026-11-10T09:00",
+  "label": "After the match 3장(11/10 09:00 예약 실패분)",
+  "images": [
+   "docs/release/promo/stories/out/after-the-match/1-iphone-4-heart.jpg",
+   "docs/release/promo/stories/out/after-the-match/2-iphone-5-heatmap.jpg",
+   "docs/release/promo/stories/out/after-the-match/3-iphone-7-sns.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-10T18:00",
+  "label": "퀴즈 드롭볼 거리 2장",
+  "images": [
+   "docs/release/promo/quiz/out/story-quiz-dropped-ball-distance-1.jpg",
+   "docs/release/promo/quiz/out/story-quiz-dropped-ball-distance-2.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-11T18:00",
+  "label": "앱 화면 심박",
+  "images": [
+   "docs/release/promo/stories/out/week-1109/1-iphone-5-heart.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-12T17:30",
+  "label": "[직접] 퀴즈 벽 1m — 폰 앱에서 퀴즈 스티커 붙여 18:00에",
+  "manual": true,
+  "images": [
+   "docs/release/promo/quiz/out/story-quiz-wall-1m-q.jpg"
+  ],
+  "sticker": "Allowed / ✓ Indirect free kick / Retake only"
+ },
+ {
+  "at": "2026-11-13T18:00",
+  "label": "어제 퀴즈 정답(벽 1m) + 앱 화면 크라운",
+  "images": [
+   "docs/release/promo/quiz/out/story-quiz-wall-1m-a.jpg",
+   "docs/release/promo/stories/out/week-1112/1-iphone-2-crown.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-14T18:00",
+  "label": "앱 화면 킥오프",
+  "images": [
+   "docs/release/promo/stories/out/week-1112/2-iphone-1-kickoff.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-15T17:30",
+  "label": "[직접] 퀴즈 동전 던지기 — 폰 앱에서 퀴즈 스티커 붙여 18:00에",
+  "manual": true,
+  "images": [
+   "docs/release/promo/quiz/out/story-quiz-coin-toss-q.jpg"
+  ],
+  "sticker": "Kick-off only / Nothing, ref decides / ✓ Goal to attack or the kick-off"
+ },
+ {
+  "at": "2026-11-16T18:00",
+  "label": "어제 퀴즈 정답(동전) + 앱 화면 히트맵",
+  "images": [
+   "docs/release/promo/quiz/out/story-quiz-coin-toss-a.jpg",
+   "docs/release/promo/stories/out/week-1112/3-iphone-6-heatmap.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-17T18:00",
+  "label": "앱 화면 보고서",
+  "images": [
+   "docs/release/promo/stories/out/week-1112/4-iphone-7-report.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-18T18:00",
+  "label": "앱 화면 경기 기록",
+  "images": [
+   "docs/release/promo/stories/out/week-1112/5-iphone-3-events.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-19T18:00",
+  "label": "앱 화면 킥오프(골 두 번 탭 장 대신)",
+  "images": [
+   "docs/release/promo/stories/out/week-1119/1-iphone-1-kickoff.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-20T18:00",
+  "label": "앱 화면 심박",
+  "images": [
+   "docs/release/promo/stories/out/week-1119/2-iphone-5-heart.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-21T18:00",
+  "label": "앱 화면 SNS 카드",
+  "images": [
+   "docs/release/promo/stories/out/week-1119/3-iphone-8-sns.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-22T18:00",
+  "label": "앱 화면 프리셋",
+  "images": [
+   "docs/release/promo/stories/out/week-1119/4-iphone-9-presets.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-23T18:00",
+  "label": "앱 화면 크라운",
+  "images": [
+   "docs/release/promo/stories/out/week-1119/5-iphone-2-crown.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-24T18:00",
+  "label": "앱 화면 히트맵",
+  "images": [
+   "docs/release/promo/stories/out/week-1119/6-iphone-6-heatmap.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-25T18:00",
+  "label": "앱 화면 보고서",
+  "images": [
+   "docs/release/promo/stories/out/week-1119/7-iphone-7-report.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-12T12:00",
+  "account": "kr",
+  "label": "[kr] 앱 화면 킥오프부터 승부차기까지",
+  "images": [
+   "docs/release/promo/stories/out/ko-week-1112/1-ko-iphone-1-kickoff.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-13T12:00",
+  "account": "kr",
+  "label": "[kr] 앱 화면 경기 보고서 PDF",
+  "images": [
+   "docs/release/promo/stories/out/ko-week-1112/2-ko-iphone-7-report.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-19T12:00",
+  "account": "kr",
+  "label": "[kr] 앱 화면 크라운으로 조작",
+  "images": [
+   "docs/release/promo/stories/out/ko-week-1112/3-ko-iphone-2-crown.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-15T12:00",
+  "account": "kr",
+  "label": "[kr] 앱 화면 끝나면 아이폰에",
+  "images": [
+   "docs/release/promo/stories/out/ko-week-1112/4-ko-iphone-3-events.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-16T12:00",
+  "account": "kr",
+  "label": "[kr] 앱 화면 프리셋",
+  "images": [
+   "docs/release/promo/stories/out/ko-week-1112/5-ko-iphone-9-presets.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-17T12:00",
+  "account": "kr",
+  "label": "[kr] 앱 화면 히트맵",
+  "images": [
+   "docs/release/promo/stories/out/ko-week-1112/6-ko-iphone-6-heatmap.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-18T12:00",
+  "account": "kr",
+  "label": "[kr] 앱 화면 심박수",
+  "images": [
+   "docs/release/promo/stories/out/ko-week-1112/7-ko-iphone-5-heart.jpg"
+  ]
+ },
+ {
+  "at": "2026-11-16T19:00",
+  "account": "kr",
+  "kind": "carousel",
+  "label": "[kr 피드] 캐러셀 심판 퀴즈 1편",
+  "images": [
+   "docs/release/promo/feed-ko/1112/1112-01.jpg",
+   "docs/release/promo/feed-ko/1112/1112-02.jpg",
+   "docs/release/promo/feed-ko/1112/1112-03.jpg",
+   "docs/release/promo/feed-ko/1112/1112-04.jpg",
+   "docs/release/promo/feed-ko/1112/1112-05.jpg",
+   "docs/release/promo/feed-ko/1112/1112-06.jpg",
+   "docs/release/promo/feed-ko/1112/1112-07.jpg",
+   "docs/release/promo/feed-ko/1112/1112-08.jpg"
+  ],
+  "caption": "심판 퀴즈 1편 🧠 3문제, 몇 개 맞히셨어요?\n\n1. 슈팅이 주심을 맞고 그대로 골문에 들어가면?\n2. 골킥, 페널티 에어리어 안에서 바로 받아도 될까?\n3. 골키퍼가 손으로 던진 볼이 상대 골문에 들어가면?\n\n넘겨서 정답을 확인하고, 점수를 댓글로 남겨 주세요 👇\n출처: IFAB 경기규칙 2026/27 (용어는 대한축구협회 번역)\n\n#축구심판 #심판 #경기규칙 #심판퀴즈 #생활축구"
+ },
+ {
+  "at": "2026-11-17T19:00",
+  "account": "kr",
+  "kind": "carousel",
+  "label": "[kr 피드] 캐러셀 종료 휘슬부터 보고서까지",
+  "images": [
+   "docs/release/promo/feed-ko/1113/1113-01.jpg",
+   "docs/release/promo/feed-ko/1113/1113-02.jpg",
+   "docs/release/promo/feed-ko/1113/1113-03.jpg",
+   "docs/release/promo/feed-ko/1113/1113-04.jpg"
+  ],
+  "caption": "종료 휘슬부터 경기 보고서까지, 30초면 끝나요 📄\n\n⌚ 경기 중 골·카드·교체는 손목에서 기록\n📱 경기가 끝나면 한 번 눌러 휴대폰으로 보내요\n📝 골·카드·교체와 시간이 채워진 A4 PDF 보고서\n✍️ 서명해서 바로 제출\n\n비 오는 날 젖은 수첩에 다시 옮겨 적을 일이 없어요.\n타이머는 무료, PRO는 7일 무료 체험. 프로필 링크에서 받을 수 있어요 👆\n\n#축구심판 #심판 #경기보고서 #애플워치 #생활축구"
+ },
+ {
+  "at": "2026-11-18T19:00",
+  "account": "kr",
+  "kind": "reel",
+  "label": "[kr 피드] 릴스 퀴즈 킥오프에서 바로 골",
+  "images": [
+   "docs/release/promo/feed-ko/1114/reel-1114.mp4"
+  ],
+  "caption": "킥오프하자마자 센터 마크에서 찬 슈팅이 그대로 골문에… ⚽\n\n득점일까요? 3초 안에 판정해 보세요.\n정답은 영상 끝에 있어요.\n\n다음 문제도 풀어 보려면 팔로우 👆\n출처: IFAB 경기규칙 2026/27 제8조 1항\n\n#축구심판 #심판 #경기규칙 #심판퀴즈 #축구"
+ },
+ {
+  "at": "2026-11-19T19:00",
+  "account": "kr",
+  "kind": "carousel",
+  "label": "[kr 피드] 캐러셀 심판 가방 체크리스트",
+  "images": [
+   "docs/release/promo/feed-ko/1115/1115-01.jpg",
+   "docs/release/promo/feed-ko/1115/1115-02.jpg",
+   "docs/release/promo/feed-ko/1115/1115-03.jpg",
+   "docs/release/promo/feed-ko/1115/1115-04.jpg",
+   "docs/release/promo/feed-ko/1115/1115-05.jpg",
+   "docs/release/promo/feed-ko/1115/1115-06.jpg"
+  ],
+  "caption": "경기 날 심판 가방, 이것만 챙기면 돼요 🎒\n\n✅ 호루라기 두 개 · 옐로·레드카드 · 동전 · 충전한 워치\n✅ 심판복 두 가지 색 · 축구화와 여분 끈 · 깃발\n✅ 물 · 밴드·테이프 · 배정 담당자와 경기장 연락처\n\n저장해 두고 경기 전날 밤에 한 번 확인해 보세요.\n골과 카드는 수첩 대신 손목에서 기록할 수 있어요. 프로필 링크 👆\n\n#축구심판 #심판 #심판준비물 #생활축구 #조기축구"
+ },
+ {
+  "at": "2026-11-20T19:00",
+  "account": "kr",
+  "kind": "reel",
+  "label": "[kr 피드] 릴스 손목에서 골 기록",
+  "images": [
+   "docs/release/promo/feed-ko/1116/reel-1116.mp4"
+  ],
+  "caption": "골 기록, 탭 세 번이면 끝나요 ⚽\n\n팀 칸 → 골 → 선수.\n카드도 같은 방법으로 명단에서 바로 고르고,\n경기 시간과 남은 시간은 뛰면서 흘끗 봐도 보여요.\n\n애플 워치 앱, 타이머는 무료예요. 프로필 링크에서 받을 수 있어요 👆\n\n#축구심판 #심판 #애플워치 #생활축구 #조기축구"
+ },
+ {
+  "at": "2026-11-21T19:00",
+  "account": "kr",
+  "kind": "carousel",
+  "label": "[kr 피드] 캐러셀 옐로카드 탭 세 번",
+  "images": [
+   "docs/release/promo/feed-ko/1117/1117-01.jpg",
+   "docs/release/promo/feed-ko/1117/1117-02.jpg",
+   "docs/release/promo/feed-ko/1117/1117-03.jpg",
+   "docs/release/promo/feed-ko/1117/1117-04.jpg",
+   "docs/release/promo/feed-ko/1117/1117-05.jpg",
+   "docs/release/promo/feed-ko/1117/1117-06.jpg"
+  ],
+  "caption": "옐로카드, 탭 세 번이면 기록 끝 🟨\n\n1. 팀 칸을 누르고\n2. 옐로카드 또는 레드카드를 고르고\n3. 명단에서 선수를 고르면 끝\n\n몇 분에 누가 받았는지 보고서에 그대로 들어가요. (PRO 기능, 7일 무료 체험)\n프로필 링크에서 받을 수 있어요 👆\n\n#축구심판 #심판 #옐로카드 #애플워치 #생활축구"
+ },
+ {
+  "at": "2026-11-22T19:00",
+  "account": "kr",
+  "kind": "carousel",
+  "label": "[kr 피드] 캐러셀 심판 퀴즈 2편",
+  "images": [
+   "docs/release/promo/feed-ko/1118/1118-01.jpg",
+   "docs/release/promo/feed-ko/1118/1118-02.jpg",
+   "docs/release/promo/feed-ko/1118/1118-03.jpg",
+   "docs/release/promo/feed-ko/1118/1118-04.jpg",
+   "docs/release/promo/feed-ko/1118/1118-05.jpg",
+   "docs/release/promo/feed-ko/1118/1118-06.jpg",
+   "docs/release/promo/feed-ko/1118/1118-07.jpg",
+   "docs/release/promo/feed-ko/1118/1118-08.jpg"
+  ],
+  "caption": "심판 퀴즈 2편 🧠 이번엔 재개 문제예요\n\n1. 스로인이 그대로 상대 골문에 들어가면?\n2. 오프사이드 위치에서 골킥을 직접 받으면?\n3. 드롭볼이 한 명만 닿고 골문에 들어가면?\n\n넘겨서 정답을 확인하고, 점수를 댓글로 남겨 주세요 👇\n출처: IFAB 경기규칙 2026/27 (용어는 대한축구협회 번역)\n\n#축구심판 #심판 #경기규칙 #심판퀴즈 #생활축구"
+ },
+ {
+  "at": "2026-11-16T05:50",
+  "label": "이벤트 릴스 A안(wet notepad)",
+  "kind": "reel",
+  "images": [
+   "docs/release/promo/event-hook-en.mp4"
+  ],
+  "caption": "Still writing cards on a wet notepad? 📝💧\n\nGoal in three taps on your Apple Watch. Cards and subs too, and the match report is ready at the final whistle.\n\n🎁 1 month of PRO, free this week:\n1️⃣ Comment \"REF\" → we'll DM you the link\n2️⃣ Tag a referee friend who'd use this\n\niPhone · until Nov 22 · no auto-renew, it just ends. The timer itself is free, no time limit.\n\n#referee #soccerreferee #footballreferee #refereelife #WhistlePRO"
+ }
+]
