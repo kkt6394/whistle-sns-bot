@@ -136,12 +136,18 @@ def dms(uid, tok, me, s):
         if uk(user) in s["users"] or uk(user) in handled.values():
             handled[m["id"]] = uk(user)
             continue
+        # 실패하면 처리함으로 적지 않고 다음 확인 때 다시 보낸다(3번까지, 11-16 스토리 답장 안내 실패)
+        fails = s.setdefault("dm_fail", {})
+        if fails.get(m["id"], 0) >= 3:
+            continue
         try:
             call(f"{B}/{uid}/messages?access_token={tok}", {"recipient": {"id": m["from"]["id"]}, "message": {"text": DM_TO_COMMENT + s.get("latest_url", REEL_URL)}})
             print(uk(user), "DM ref → 댓글 안내")
+            handled[m["id"]] = uk(user)
+            fails.pop(m["id"], None)
         except RuntimeError as e:
-            print(uk(user), "DM 안내 실패", e)
-        handled[m["id"]] = uk(user)
+            fails[m["id"]] = fails.get(m["id"], 0) + 1
+            print(uk(user), "DM 안내 실패", fails[m["id"]], e)
         save(s)
 
 
