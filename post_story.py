@@ -162,14 +162,46 @@ def already_up(item):
     ours = {i for v in load(STATE, {}).values() for i in v.get("ids", [])}
     edge = "media" if item.get("kind") in ("carousel", "reel") else "stories"  # 피드는 사용자가 직접 올렸는지 본다
     data = _call(f"https://graph.facebook.com/v21.0/{uid}/{edge}?fields=id,timestamp&limit=10&access_token={tok}")["data"]
-    t0 = when(item) - timedelta(minutes=5)
+    t0 = when(item) - timedelta(minutes=15 if item.get("replace_old") else 5)
     return [s["id"] for s in data if s["id"] not in ours
             and datetime.strptime(s["timestamp"], "%Y-%m-%dT%H:%M:%S%z") >= t0]
+
+
+def replace_old(item, dup):
+    """Business Suite 옛 예약(삭제가 안 됨, 11-17)이 먼저 올라갔으면 지우고 새 판을 올린다.
+    지우는 건 그 시각 이후 올라온 우리 것 아닌 게시물 중 글 첫머리가 replace_old와 같은 것만 (Meta IG 미디어 삭제 API, 2025-12)."""
+    uid, tok = creds(item)
+    gone = []
+    for mid in dup:
+        cap = _call(f"https://graph.facebook.com/v21.0/{mid}?fields=caption&access_token={tok}").get("caption") or ""
+        if cap.startswith(item["replace_old"]):
+            req = urllib.request.Request(f"https://graph.facebook.com/v21.0/{mid}?access_token={tok}", method="DELETE",
+                                         headers={"User-Agent": "WhistleStory/1.0"})
+            try:
+                with urllib.request.urlopen(req, timeout=60) as r:
+                    r.read()
+            except urllib.error.HTTPError as e:  # 토큰에 instagram_manage_contents가 없으면 여기로 — 옛 판을 두고 건너뛴다
+                print(f"옛 판 삭제 실패 {item['label']} {mid}: {e.read().decode()[:150]}")
+                continue
+            print("옛 판 지움", item["label"], mid)
+            gone.append(mid)
+    return gone
 
 
 def run(item, check=True):
     try:
         dup = already_up(item) if check else []
+        if dup and item.get("replace_old"):
+            gone = replace_old(item, dup)
+            dup = [d for d in dup if d not in gone]
+            if dup:  # 옛 판을 못 지움 → 사용자가 앱에서 지울 때까지 5분마다 다시 보고, 지워지면 새 판을 올린다
+                s, wk = load(STATE, {}), key(item) + " :old-waiting"
+                if wk not in s:
+                    notify(f"옛 판이 올라옴 — 인스타 앱에서 지우면 새 판을 올림: {item['label']}")
+                    s[wk] = {"status": "waiting", "ids": [], "at": datetime.now(KST).isoformat(timespec="minutes")}
+                    STATE.write_text(json.dumps(s, ensure_ascii=False, indent=1))
+                print("옛 판 지워지길 기다림", item["label"], dup)
+                return False
         if dup:
             mark(item, dup, "business-suite")
             print("Business Suite 예약이 올라가 있어 건너뜀", item["label"], dup)
